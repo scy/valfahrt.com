@@ -1,0 +1,118 @@
+body {
+	background-color:#ec7703;
+	margin:0;
+	padding:0;
+}
+
+body, * {
+	font-family:"Century Gothic", Arial, Helvetica, sans-serif;
+}
+
+.l {
+	text-align:left;
+}
+
+.c {
+	text-align:center;
+}
+
+.r {
+	text-align:right;
+}
+
+div#content a {
+	letter-spacing:0.1em;
+	color:#040b5c;
+	text-decoration:none;
+	border-bottom:1px solid #040b5c;
+}
+
+div#content a:hover, div#content a:focus, div#content a:active {
+	color:#0818c4;
+	border-color:#0818c4;
+}
+
+div#header, div#footer {
+	background:url("ornament.png") center;
+}
+
+div#footer {
+	background-repeat:no-repeat;
+	height:250px;
+}
+
+a#logo {
+	background:url("logo.png") center no-repeat;
+	height:230px;
+	width:750px;
+	margin:0 auto;
+	display:block;
+}
+
+a#logo h1 {
+	display:none;
+}
+
+div#content {
+	margin:0 auto;
+	width:750px;
+}
+
+div#subtitle {
+	border:1px #d8570f;
+	border-style:solid none;
+}
+
+div#subtitle table {
+	width:750px;
+	margin:0.3ex auto;
+}
+
+div#subtitle table td {
+	font-weight:bold;
+	letter-spacing:0.3em;
+}
+
+h2 {
+	font-size:110%;
+	margin:4em 0 3em;
+	text-align:center;
+	letter-spacing:0.2em;
+}
+
+p {
+	text-align:justify;
+	letter-spacing:0.05em;
+}
+
+span.tel {
+	white-space:nowrap;
+}
+
+table#form {
+	margin:0 auto;
+	width:100%;
+}
+
+table#form th {
+	text-align:left;
+	vertical-align:top;
+	width:35%;
+}
+
+table#form td {
+	padding:0.1em;
+}
+
+.error {
+	color:#d60909;
+}
+
+p.error {
+	padding:0.4em;
+	background-color:#edb277;
+	border:1px solid #d60909;
+	-moz-border-radius:1em;
+	text-align:center;
+	font-weight:bold;
+}
