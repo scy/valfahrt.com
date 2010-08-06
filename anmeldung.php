@@ -77,13 +77,20 @@ Solltest du in einigen Tagen noch nichts von uns gehört haben, bitten wir dich,
 ?>
 
 <script>
+var before = "";
 $(function () {
-	if ($("input:radio:checked[name=kommt]").val() != "ja") {
+	before = $("input:radio:checked[name=kommt]").val();
+	if (before != "ja") {
 		$(".hide").css("visibility", "hidden");
 		$(".moveup").css("top", "-15em");
 	}
 	$("input[name=kommt]").click(function () {
-		if ($("input:radio:checked[name=kommt]").val() == "ja") {
+		var now = $("input:radio:checked[name=kommt]").val();
+		if (now == before) {
+			return;
+		}
+		before = now;
+		if (now == "ja") {
 			$(".hide").fadeTo(0, 0);
 			$(".hide").css("visibility", "visible");
 			$(".moveup").animate({
