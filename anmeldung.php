@@ -83,10 +83,11 @@ $(function () {
 	}
 	$("input[name=kommt]").click(function () {
 		if ($("input:radio:checked[name=kommt]").val() == "ja") {
+			$(".hide").fadeTo(0, 0);
 			$(".hide").css("visibility", "visible");
-			$(".hide").fadeTo(500, 100);
+			$(".hide").fadeTo(1000, 1);
 		} else {
-			$(".hide").fadeTo(500, 0, function () {
+			$(".hide").fadeTo(1000, 0, function () {
 				$(".hide").css("visibility", "hidden");
 			});
 		}
