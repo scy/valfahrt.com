@@ -104,6 +104,10 @@ table#form td {
 	padding:0.1em;
 }
 
+input.moveup {
+	position:relative;
+}
+
 .error {
 	color:#d60909;
 }

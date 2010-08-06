@@ -80,15 +80,23 @@ Solltest du in einigen Tagen noch nichts von uns gehört haben, bitten wir dich,
 $(function () {
 	if ($("input:radio:checked[name=kommt]").val() != "ja") {
 		$(".hide").css("visibility", "hidden");
+		$(".moveup").css("top", "-15em");
 	}
 	$("input[name=kommt]").click(function () {
 		if ($("input:radio:checked[name=kommt]").val() == "ja") {
 			$(".hide").fadeTo(0, 0);
 			$(".hide").css("visibility", "visible");
-			$(".hide").fadeTo(1000, 1);
+			$(".moveup").animate({
+				"top": "0em"
+			}, 200, "swing", function () {
+				$(".hide").fadeTo(500, 1);
+			});
 		} else {
-			$(".hide").fadeTo(1000, 0, function () {
+			$(".hide").fadeTo(300, 0, function () {
 				$(".hide").css("visibility", "hidden");
+				$(".moveup").animate({
+					"top": "-15em"
+				}, 200);
 			});
 		}
 	});
@@ -122,7 +130,7 @@ $(function () {
 	<td><textarea name="text" id="text" rows="5" cols="40"><?php echo htmlspecialchars($text); ?></textarea></td>
 </tr><tr>
 	<th></th>
-	<td><input type="submit" value="Abschicken" /></td>
+	<td><input type="submit" value="Abschicken" class="moveup" /></td>
 </tr>
 </table></form>
 
