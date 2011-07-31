@@ -24,7 +24,7 @@ function selectrange($min, $max, $val) {
 <div id="subtitle">
 <table><tr>
 	<td class="l">Val Sainte Marie</td>
-	<td class="r">9. – 16. Oktober 2010</td>
+	<td class="r">8. – 15. Oktober 2011</td>
 </tr></table>
 </div>
 <div id="content">
