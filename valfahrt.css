@@ -1,5 +1,6 @@
 body {
-	background-color:#ec7703;
+	background-color:#204000;
+	color:#ccc;
 	margin:0;
 	padding:0;
 }
@@ -22,28 +23,22 @@ body, * {
 
 div#content a {
 	letter-spacing:0.1em;
-	color:#040b5c;
-	text-decoration:none;
-	border-bottom:1px solid #040b5c;
+	color:#60bf00;
+	text-decoration:underline;
 }
 
 div#content a:hover, div#content a:focus, div#content a:active {
-	color:#0818c4;
-	border-color:#0818c4;
-}
-
-div#header, div#footer {
-	background:url("ornament.png") center;
+	color:#7fff00;
 }
 
 div#footer {
-	background-repeat:no-repeat;
+	background:url("ornament.png") center no-repeat;
 	height:250px;
 }
 
 a#logo {
 	background:url("logo.png") center no-repeat;
-	height:230px;
+	height:276px;
 	width:750px;
 	margin:0 auto;
 	display:block;
@@ -59,7 +54,7 @@ div#content {
 }
 
 div#subtitle {
-	border:1px #d8570f;
+	border:1px #7fff00;
 	border-style:solid none;
 }
 
@@ -109,13 +104,13 @@ input.moveup {
 }
 
 .error {
-	color:#d60909;
+	color:#7f0000;
 }
 
 p.error {
 	padding:0.4em;
-	background-color:#edb277;
-	border:1px solid #d60909;
+	background-color:#ff5c00;
+	border:1px solid #7f0000;
 	-moz-border-radius:1em;
 	text-align:center;
 	font-weight:bold;
