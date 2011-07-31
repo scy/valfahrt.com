@@ -10,6 +10,8 @@ $kommt = false;
 $name = '';
 $erwachsene = 1;
 $kinder = 0;
+$hunde = 0;
+$zimmer = 1;
 $kontakt = '';
 $text = '';
 
@@ -19,6 +21,8 @@ if (isset($_POST['kommt'])) {
 	$name = substr(@$_POST['name'], 0, 100);
 	$erwachsene = (int)@$_POST['erwachsene'];
 	$kinder = (int)@$_POST['kinder'];
+	$hunde = (int)@$_POST['hunde'];
+	$zimmer = (int)@$_POST['zimmer'];
 	$kontakt = substr(@$_POST['kontakt'], 0, 100);
 	$text = substr(@$_POST['text'], 0, 10240);
 	if (empty($name))
@@ -35,6 +39,8 @@ $name hat gerade das Val-Formular ausgefüllt und kommt" . ($kommt ? '!' : ' nic
 
    Anzahl Erwachsene: $erwachsene
    Anzahl Kinder:     $kinder
+   Anzahl Hunde:      $hunde
+   Anzahl Zimmer:     $zimmer
    Kontaktdaten:      $kontakt
 
 $text";
@@ -129,6 +135,12 @@ $(function () {
 		<select name="erwachsene" id="erwachsene" size="1"><?php echo selectrange(1, 10, $erwachsene); ?></select> <label for="erwachsene">Erwachsene</label><br />
 		<select name="kinder" id="kinder" size="1"><?php echo selectrange(0, 10, $kinder); ?></select> <label for="kinder">Kinder</label>
 	</td>
+</tr><tr class="hide">
+	<th><label for="hunde">Hunde:</label></th>
+	<td><select name="hunde" id="hunde" size="1"><?php echo selectrange(0, 3, $hunde); ?></select> <label for="hunde">Hunde</label></td>
+</tr><tr class="hide">
+	<th><label for="zimmer">Vorauss. Anzahl Zimmer:</label></th>
+	<td><select name="zimmer" id="zimmer" size="1"><?php echo selectrange(1, 3, $zimmer); ?></select> <label for="zimmer">Zimmer</label></td>
 </tr><tr class="hide">
 	<th><label for="kontakt">E-Mail oder Telefon:</label></th>
 	<td><input type="text" name="kontakt" id="kontakt" maxlength="100" value="<?php echo htmlspecialchars($kontakt); ?>"/></td>
