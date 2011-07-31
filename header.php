@@ -1,4 +1,5 @@
-<?php echo '<' . '?xml version="1.0" encoding="utf-8" ?' . '>'; ?>
+<?php echo '<' . '?xml version="1.0" encoding="UTF-8" ?' . '>'; ?>
+<!DOCTYPE html>
 <?php
 function selectrange($min, $max, $val) {
 	for ($i = $min; $i <= $max; $i++) {
@@ -7,8 +8,9 @@ function selectrange($min, $max, $val) {
 	}
 }
 ?>
-<html>
+<html lang="de" xmlns="http://www.w3.org/1999/xhtml">
 <head>
+	<meta charset="UTF-8" />
 	<title>VAL – next generation</title>
 	<link rel="stylesheet" href="valfahrt.css" />
 	<script src="jquery-1.4.2.min.js"></script>
